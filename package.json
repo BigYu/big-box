@@ -1,0 +1,23 @@
+{
+  "name": "big-box",
+  "version": "1.0.0",
+  "description": "I can put my world for you here. Come to get your L.O.V.E.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BigYu/big-box.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BigYu/big-box/issues"
+  },
+  "homepage": "https://github.com/BigYu/big-box#readme",
+  "dependencies": {
+    "islider.js": "^2.2.0"
+  }
+}
