@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/BigYu/big-box#readme",
   "dependencies": {
+    "express": "^4.14.1",
     "islider.js": "^2.2.0"
   }
 }
