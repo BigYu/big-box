@@ -8,9 +8,10 @@ let list = [
 ]
 
 let islider = new iSlider(document.getElementById("iSlider-wrapper"), list, {
-    isAutoplay: 0,
+    isAutoplay: 1,
     isLooping: 0,
     isOverspread: 1,
     animateTime: 800,
-    isVertical: true
+    isVertical: true,
+    animateType: 'rotate'
 });
