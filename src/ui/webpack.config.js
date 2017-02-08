@@ -15,6 +15,10 @@ module.exports = {
           sourceMaps: true
         },
       },
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
+      }
     ]
   }
 }
