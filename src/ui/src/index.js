@@ -1,25 +1,24 @@
-const $ = require('zeptojs');
-const iSlider = require('islider.js');
-const TinyTyper = require('tinytyper');
+import $ from 'zeptojs';
+import iSlider from 'islider.js';
+import TinyTyper from 'tinytyper';
+import getList from './getList.js';
+import paragraphs from '../data/text.yml';
+import './style/index.scss';
 
-let list = [
-  { content: './static/images/2.jpg' },
-  { content: '<div class="page1"></div>' },
-  { content: '<div><h1>Page1</h1><h2>This is page1</h2><p>page1 is pretty awsome</p><div>' },
-]
+console.log(paragraphs);
 
-let islider = new iSlider(document.getElementById("iSlider-wrapper"), list, {
-    isAutoplay: 0,
-    isLooping: 0,
-    isOverspread: 1,
-    animateTime: 800,
-    isVertical: 0,
-    animateType: 'card',
-    onSlideChanged: (index, el) => {
-      if (index === 1) {
+new iSlider(document.getElementById("iSlider-wrapper"), getList(paragraphs.length + 1), {
+  isAutoplay: 0,
+  isLooping: 0,
+  isOverspread: 1,
+  animateTime: 800,
+  isVertical: 0,
+  animateType: 'card',
+  onSlideChanged: (index, el) => {
+    if (index > 0) {
         let typer = new TinyTyper(el, {
-          text: 'Hello hello',
-        });
-      }
+        text: paragraphs[index - 1] || '',
+      });
     }
+  }
 });
