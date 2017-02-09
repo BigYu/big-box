@@ -1,9 +1,10 @@
 const $ = require('zeptojs');
-const iSlider = require('islider.js')
+const iSlider = require('islider.js');
+const TinyTyper = require('tinytyper');
 
 let list = [
-  { content: '<div><h1>Page1</h1><h2>This is page1</h2><p>page1 is pretty awsome</p><div>' },
   { content: './static/images/2.jpg' },
+  { content: '<div class="page1"></div>' },
   { content: '<div><h1>Page1</h1><h2>This is page1</h2><p>page1 is pretty awsome</p><div>' },
 ]
 
@@ -13,5 +14,12 @@ let islider = new iSlider(document.getElementById("iSlider-wrapper"), list, {
     isOverspread: 1,
     animateTime: 800,
     isVertical: 0,
-    animateType: 'flow'
+    animateType: 'flow',
+    onSlideChanged: (index, el) => {
+      if (index === 1) {
+        let typer = new TinyTyper(el, {
+          text: 'Hello hello',
+        });
+      }
+    }
 });
