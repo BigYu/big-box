@@ -14,7 +14,7 @@ let islider = new iSlider(document.getElementById("iSlider-wrapper"), list, {
     isOverspread: 1,
     animateTime: 800,
     isVertical: 0,
-    animateType: 'flow',
+    animateType: 'card',
     onSlideChanged: (index, el) => {
       if (index === 1) {
         let typer = new TinyTyper(el, {
