@@ -1,4 +1,44 @@
-.tiny-typer-text {
-  font-size: 32px;
-  color: white;
+@function getTop($index) {
+  @return -300px + 64px * ($index % 6);
+}
+
+@for $index from 1 through 19 {
+  .page-text-#{$index},
+  .page-text-cursor-#{$index} {
+    font-size: 30px;
+    position: relative;
+    top: getTop($index);
+    color: white;
+  }
+}
+
+.page-text-1,
+.page-text-cursor-1 {
+  color: #633974;
+}
+
+.page-text-3,
+.page-text-cursor-3,
+.page-text-4,
+.page-text-cursor-4  {
+  color: #3498DB;
+}
+
+.page-text-16,
+.page-text-cursor-16 {
+  color: #52BE80;
+}
+
+.page-text-17,
+.page-text-cursor-17 {
+  color: #2980B9;
+}
+
+.page-text-18,
+.page-text-cursor-18,
+.page-text-19,
+.page-text-cursor-19 {
+  top: 0;
+  text-decoration: underline;
+  text-shadow: 0 0 3px;
 }
