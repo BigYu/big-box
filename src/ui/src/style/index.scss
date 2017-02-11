@@ -1,5 +1,5 @@
 @function getTop($index) {
-  @return -300px + 64px * ($index % 6);
+  @return -250px + 64px * ($index % 6);
 }
 
 @for $index from 1 through 19 {
