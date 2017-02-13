@@ -2,7 +2,7 @@
   @return -250px + 64px * ($index % 6);
 }
 
-@for $index from 1 through 19 {
+@for $index from 1 through 20 {
   .page-text-#{$index},
   .page-text-cursor-#{$index} {
     font-size: 30px;
@@ -34,10 +34,10 @@
   color: #2980B9;
 }
 
-.page-text-18,
-.page-text-cursor-18,
 .page-text-19,
-.page-text-cursor-19 {
+.page-text-cursor-19,
+.page-text-20,
+.page-text-cursor-20 {
   top: 0;
   text-decoration: underline;
   text-shadow: 0 0 3px;
