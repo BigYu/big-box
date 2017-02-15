@@ -13,13 +13,14 @@ new iSlider(document.getElementById("iSlider-wrapper"), getList(paragraphs.lengt
   isOverspread: 1,
   animateTime: 800,
   isVertical: 0,
-  animateType: 'card',
+  animateType: 'flip',
   onSlideChanged: (index, el) => {
     if (index > 0 && index <= paragraphs.length) {
       new TinyTyper(el, {
         text: paragraphs[index - 1] || '',
         textClass: `page-text-${index}`,
         cursorClass: `page-text-cursor-${index}`,
+        blinkSpeed: 0.09,
       });
     } else if (index > paragraphs.length) {
       new TinyTyper(el);
